@@ -14,7 +14,7 @@ The system uses **two LPC2129 nodes** communicating over a CAN bus at **100 kbps
 │         (Transmitter)           │         │       (Receiver)                │
 │                                 │  CAN    │                                 │
 │  ┌──────────┐  ┌─────────────┐  │ 100kbps │  ┌──────────┐  ┌────────────┐   │
-│  │ ADC      │  │ EINT0/1/2   │  │◄───────►│  │ CAN2 RX  │  │ 16×2 LCD   │    │
+│  │ ADC      │  │ EINT0/1/2   │  │◄───────►│  │ CAN2 RX  │  │ 16×2 LCD   │   │
 │  │ Speed    │  │ Indicators  │  │         │  │ ISR      │  │ Custom     │   │
 │  │ Temp     │  │ Head Light  │  │         │  │          │  │ CGRAM      │   │
 │  └────┬─────┘  └──────┬──────┘  │         │  └────┬─────┘  └─────┬──────┘   │
