@@ -13,11 +13,11 @@ The system uses **two LPC2129 nodes** communicating over a CAN bus at **100 kbps
 │         NODE A — Sensor Node    │         │       NODE B — Display Node     │
 │         (Transmitter)           │         │       (Receiver)                │
 │                                 │  CAN    │                                 │
-│  ┌──────────┐  ┌─────────────┐  │ 100kbps │  ┌──────────┐  ┌────────────┐  │
-│  │ ADC      │  │ EINT0/1/2   │  │◄───────►│  │ CAN2 RX  │  │ 16×2 LCD  │  │
-│  │ Speed    │  │ Indicators  │  │         │  │ ISR      │  │ Custom     │  │
-│  │ Temp     │  │ Head Light  │  │         │  │          │  │ CGRAM      │  │
-│  └────┬─────┘  └──────┬──────┘  │         │  └────┬─────┘  └─────┬──────┘  │
+│  ┌──────────┐  ┌─────────────┐  │ 100kbps │  ┌──────────┐  ┌────────────┐   │
+│  │ ADC      │  │ EINT0/1/2   │  │◄───────►│  │ CAN2 RX  │  │ 16×2 LCD   │    │
+│  │ Speed    │  │ Indicators  │  │         │  │ ISR      │  │ Custom     │   │
+│  │ Temp     │  │ Head Light  │  │         │  │          │  │ CGRAM      │   │
+│  └────┬─────┘  └──────┬──────┘  │         │  └────┬─────┘  └─────┬──────┘   │
 │       │               │         │         │       │               │         │
 │  ┌────▼───────────────▼──────┐  │         │  ┌────▼───────────────▼──────┐  │
 │  │     Timer1 ISR            │  │         │  │  Bmain.c — Frame decoder  │  │
